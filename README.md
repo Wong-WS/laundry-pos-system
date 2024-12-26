@@ -16,4 +16,10 @@ Provide an intuitive user interface for easy use by shop owners.
 
 This project will be developed without relying on AI-generated code. All knowledge and implementation will come from thorough research using official documentation, online tutorials, and relevant coding resources. The project reflects a commitment to self-learning and problem-solving.
 
+## Technology 
+
+### Frontend:
+
+HTML, CSS, Javascrit, ReactJs, and some components from other resources like Material UI
+
 
