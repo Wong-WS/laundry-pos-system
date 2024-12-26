@@ -1,0 +1,4 @@
+.new-order {
+  display: flex;
+  justify-content: space-between;
+}

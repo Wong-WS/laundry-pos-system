@@ -1,7 +1,15 @@
 import React from "react";
+import "./NewOrder.css"
+import OrderTab from "./OrderTab"
+import OrderSummary from "./OrderSummary"
 
-const NewOrder = () => {
-  return <h1>New order component</h1>;
-};
+function NewOrder() {
+  return (
+    <div className="new-order">
+      <OrderTab />
+      <OrderSummary />
+    </div>
+  )
+}
 
 export default NewOrder;
