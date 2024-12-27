@@ -1,11 +1,13 @@
 import React from "react"
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 function WashFoldComponent() {
   return (
-    <div>
-      <h2>Wash & Fold Services</h2>
-      <p>Details about Wash & Fold services go here.</p>
-    </div>
+    <Stack spacing={2} direction={"row"}>
+      <Button variant="contained">Clothes</Button>
+      <Button variant="contained">Bedsheets</Button>
+    </Stack>
   );
 }
 

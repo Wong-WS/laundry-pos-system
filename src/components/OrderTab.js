@@ -7,6 +7,7 @@ import TabPanel from '@mui/lab/TabPanel';
 import DryCleanComponent from './ordertabs-components/DryClean';
 import WashFoldComponent from './ordertabs-components/WashFold';
 import WashIronComponent from './ordertabs-components/WashIron';
+import IroningComponent from './ordertabs-components/Ironing';
 
 export default function OrderTab() {
   const [value, setValue] = React.useState('1');
@@ -20,9 +21,10 @@ export default function OrderTab() {
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
-            <Tab label="Wash & Fold" value="1" />
-            <Tab label="Wash & Iron" value="2" />
+            <Tab label="Wash-Dry-Fold" value="1" />
+            <Tab label="Wash-Dry-Iron" value="2" />
             <Tab label="Dry Clean" value="3" />
+            <Tab label="Ironing" value="4" />
           </TabList>
         </Box>
         <TabPanel value="1">
@@ -33,6 +35,9 @@ export default function OrderTab() {
         </TabPanel>
         <TabPanel value="3">
           <DryCleanComponent />
+        </TabPanel>
+        <TabPanel value="4">
+          <IroningComponent />
         </TabPanel>
       </TabContext>
     </Box>
