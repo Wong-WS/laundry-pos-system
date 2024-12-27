@@ -20,6 +20,6 @@ This project will be developed without relying on AI-generated code. All knowled
 
 ### Frontend:
 
-HTML, CSS, Javascrit, ReactJs, and some components from other resources like Material UI
+HTML, CSS, Javascript, ReactJs, and some components from other resources like Material UI
 
 
