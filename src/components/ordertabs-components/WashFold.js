@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
+import LaundryForm from "../FormComponents";
 
 function WashFoldComponent({ setFormData }) {
   const [formInput, setFormInput] = useState({
@@ -28,60 +28,29 @@ function WashFoldComponent({ setFormData }) {
     setFormData(formInput);
   };
 
+  const types = ["Clothes", "Bedsheets", "Pants", "T-Shirt"];
+
   return (
     <Stack spacing={2} direction={"column"}>
       {step === 1 && (
         <Stack spacing={2} direction={"row"}>
-          <Button
-            variant="contained"
-            onClick={() => handleTypeSelection("Clothes")}
-          >
-            Clothes
-          </Button>
-          <Button
-            variant="contained"
-            onClick={() => handleTypeSelection("Bedsheets")}
-          >
-            Bedsheets
-          </Button>
+          {types.map((type) => (
+            <Button
+              key={type}
+              variant="contained"
+              onClick={() => handleTypeSelection(type)}
+            >
+              {type}
+            </Button>
+          ))}
         </Stack>
       )}
       {step === 2 && (
-        <>
-          <TextField
-            name="name"
-            label="Name"
-            value={formInput.name}
-            onChange={handleChange}
-          />
-          <TextField
-            name="phone"
-            label="Phone"
-            value={formInput.phone}
-            onChange={handleChange}
-          />
-          <TextField
-            name="quantity"
-            label="Quantity"
-            value={formInput.quantity}
-            onChange={handleChange}
-          />
-          <TextField
-            name="kg"
-            label="KG"
-            value={formInput.kg}
-            onChange={handleChange}
-          />
-          <TextField
-            name="price"
-            label="Price"
-            value={formInput.price}
-            onChange={handleChange}
-          />
-          <Button variant="contained" onClick={handleSubmit}>
-            Submit
-          </Button>
-        </>
+        <LaundryForm
+          formInput={formInput}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+        />
       )}
     </Stack>
   );

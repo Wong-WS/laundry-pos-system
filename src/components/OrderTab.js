@@ -31,13 +31,13 @@ export default function OrderTab({ setFormData }) {
           <WashFoldComponent setFormData={setFormData} />
         </TabPanel>
         <TabPanel value="2">
-          <WashIronComponent />
+          <WashIronComponent setFormData={setFormData} />
         </TabPanel>
         <TabPanel value="3">
-          <DryCleanComponent />
+          <DryCleanComponent setFormData={setFormData} />
         </TabPanel>
         <TabPanel value="4">
-          <IroningComponent />
+          <IroningComponent setFormData={setFormData} />
         </TabPanel>
       </TabContext>
     </Box>
