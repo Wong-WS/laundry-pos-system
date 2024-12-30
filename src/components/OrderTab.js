@@ -9,7 +9,7 @@ import WashFoldComponent from './ordertabs-components/WashFold';
 import WashIronComponent from './ordertabs-components/WashIron';
 import IroningComponent from './ordertabs-components/Ironing';
 
-export default function OrderTab() {
+export default function OrderTab({ setFormData }) {
   const [value, setValue] = React.useState('1');
 
   const handleChange = (event, newValue) => {
@@ -28,7 +28,7 @@ export default function OrderTab() {
           </TabList>
         </Box>
         <TabPanel value="1">
-          <WashFoldComponent />
+          <WashFoldComponent setFormData={setFormData} />
         </TabPanel>
         <TabPanel value="2">
           <WashIronComponent />
